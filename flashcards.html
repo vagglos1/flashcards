@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Διαδραστικές κάρτες μελέτης: Αισχύλος – Σοφοκλής – Ευριπίδης</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .front {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      line-height: 1.6;
+      color: #34495e;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .hint {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 1</h3>
+        Ποια βασική καινοτομία εισάγει ο Αισχύλος στη δομή της τραγωδίας;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Ο Αισχύλος εισάγει τον δεύτερο υποκριτή, επιτρέποντας ουσιαστικό διάλογο και δραματική σύγκρουση, μειώνοντας την απόλυτη κυριαρχία του Χορού.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 2</h3>
+        Πώς διαφοροποιείται ο ρόλος του Χορού στους τρεις τραγικούς;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Στον Αισχύλο ο Χορός είναι κεντρικός, στον Σοφοκλή σχολιαστικός και στον Ευριπίδη πιο αποστασιοποιημένος από τη δράση.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 3</h3>
+        Πώς εξελίσσει ο Σοφοκλής τους χαρακτήρες;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Δίνει έμφαση στην ατομική ευθύνη και την εσωτερική σύγκρουση, παρουσιάζοντας πιο ανθρώπινους και ψυχολογικά σύνθετους ήρωες.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 4</h3>
+        Ποια στοιχεία ψυχολογικού ρεαλισμού εισάγει ο Ευριπίδης;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Παρουσιάζει ήρωες με πάθη, αδυναμίες και αντιφάσεις, των οποίων οι πράξεις εξηγούνται ψυχολογικά και όχι μόνο θεϊκά.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 5</h3>
+        Πώς παρουσιάζεται η θεϊκή παρέμβαση;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Στον Αισχύλο οι θεοί διασφαλίζουν τη δικαιοσύνη, στον Σοφοκλή παραμένουν πανίσχυροι, ενώ στον Ευριπίδη συχνά αμφισβητούνται ή εμφανίζονται μηχανικά.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 6</h3>
+        Ποιος ασκεί τη μεγαλύτερη κοινωνική κριτική;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Ο Ευριπίδης, καθώς αμφισβητεί θεσμούς, αξίες και τη συμπεριφορά θεών και ανθρώπων, σε αντίθεση με τον πιο παραδοσιακό Αισχύλο.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 7</h3>
+        Πώς διαφέρει η γλώσσα των τριών τραγικών;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Ο Αισχύλος έχει μεγαλοπρεπή ύφος, ο Σοφοκλής ισορροπημένο και ο Ευριπίδης απλό, καθημερινό και ρεαλιστικό.
+    </div>
+  </div>
+</div>
+
+<div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card-inner">
+    <div class="card-face front">
+      <div>
+        <h3>Κάρτα 8</h3>
+        Ποιες θεματικές προτιμά ο καθένας;
+        <div class="hint">(πάτησε για απάντηση)</div>
+      </div>
+    </div>
+    <div class="card-face back">
+      Ο Αισχύλος τη θεϊκή δικαιοσύνη, ο Σοφοκλής το ανθρώπινο χρέος και το πεπρωμένο, και ο Ευριπίδης τα ανθρώπινα πάθη και τα κοινωνικά προβλήματα.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
